@@ -1,5 +1,5 @@
 export class MonthSearchResult {
-  foodName: string;
+  food_name: string;
   jan: boolean;
   feb: boolean;
   mar: boolean;
@@ -14,7 +14,7 @@ export class MonthSearchResult {
   dec: boolean;
 
   constructor(obj?: any) {
-    this.foodName = obj && obj.food_name || null;
+    this.food_name = obj && obj.food_name;
     this.jan = obj && obj.jan || null;
     this.feb = obj && obj.feb || null;
     this.mar = obj && obj.mar || null;

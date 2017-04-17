@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MonthSearchResult } from './month-results.model'
 
 @Component({
@@ -7,8 +7,9 @@ import { MonthSearchResult } from './month-results.model'
   styleUrls: ['./month-results.component.css']
 })
 export class MonthResultsComponent implements OnInit {
+  @Input() result: MonthSearchResult;
 
-  constructor() { }
+  constructor() {  }
 
   ngOnInit() {
   }

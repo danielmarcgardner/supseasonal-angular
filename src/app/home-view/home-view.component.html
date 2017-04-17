@@ -1,3 +1,13 @@
 <app-navbar></app-navbar>
 <h1 class="headerName"> Sup Seasonal </h1>
-<app-month-search class="monthDropdown"></app-month-search>
+<app-month-search class="monthDropdown"
+  (loading)="loading = $event"
+  (results)="updateResults($event)"
+></app-month-search>
+
+<div class="seasonalBox">
+  <h1> Seasonal Ingredients </h1>
+  <app-month-results *ngFor="let result of results"
+    [result]="result">
+  </app-month-results>
+</div>
