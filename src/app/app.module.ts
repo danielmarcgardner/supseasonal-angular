@@ -10,6 +10,7 @@ import { HomeViewComponent } from './home-view/home-view.component';
 import {SuiModule} from 'ng2-semantic-ui';
 import { MonthResultsComponent } from './month-results/month-results.component';
 import { supSearchInjectables } from './month-search/search-months.injectables';
+import { MonthViewComponent } from './month-view/month-view.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { supSearchInjectables } from './month-search/search-months.injectables';
     MonthSearchComponent,
     IngredientSearchComponent,
     HomeViewComponent,
-    MonthResultsComponent
+    MonthResultsComponent,
+    MonthViewComponent
   ],
   imports: [
     BrowserModule,
