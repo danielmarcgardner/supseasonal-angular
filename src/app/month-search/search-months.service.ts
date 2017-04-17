@@ -6,21 +6,23 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { MonthSearchResult } from '../month-results/month-results.model';
 
-export const SUP_API_URL = 'http://supseasonal.herokuapp.com/api/months/';
+export const SUP_URL = 'http://supseasonal.herokuapp.com/api/months/';
 
 @Injectable()
 export class SupSearchService {
   constructor(private http: Http,
-    @Inject(SUP_API_URL) private apiUrl: string) {
+    @Inject(SUP_URL) private apiUrl: string) {
 
     }
 
-    search(query: string): Observable<SearchResult[]> {
-      const queryUrl = `${this.apiUrl}${query}`;
+    search(query: string): Observable<MonthSearchResult[]> {
+      console.log('I am query', query)
+      const queryUrl = `http://supseasonal.herokuapp.com/api/months/${query}`;
+      console.log(queryUrl)
       return this.http.get(queryUrl)
       .map((response: Response) => {
-        // return console.log(response);
-        return (<any>response.json()).items.map(item => {
+        console.log(response);
+        return (<any>response.json()).map(item => {
           console.log("raw item", item);
           return new MonthSearchResult({
             foodName: item.foodName,

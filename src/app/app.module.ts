@@ -9,6 +9,7 @@ import { IngredientSearchComponent } from './ingredient-search/ingredient-search
 import { HomeViewComponent } from './home-view/home-view.component';
 import {SuiModule} from 'ng2-semantic-ui';
 import { MonthResultsComponent } from './month-results/month-results.component';
+import { supSearchInjectables } from './month-search/search-months.injectables';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { MonthResultsComponent } from './month-results/month-results.component';
     HttpModule,
     SuiModule
   ],
-  providers: [],
+  providers: [supSearchInjectables],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
