@@ -1,3 +1,6 @@
-<p>
-  month-view works!
-</p>
+<div class="seasonalBox">
+  <h1> Seasonal Ingredients </h1>
+  <app-month-results *ngFor="let result of results"
+    [result]="result">
+  </app-month-results>
+</div>

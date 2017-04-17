@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MonthSearchResult } from './month-results/month-results.model'
+import { MonthSearchResult } from './month-results/month-results.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +11,12 @@ export class AppComponent implements OnInit{
   // results: MonthSearchResult[];
   // loading: boolean;
 
-  constructor(){}
+  constructor(private router: Router){}
 
   ngOnInit(){}
 
-  // updateResults(results: MonthSearchResult[]): void {
-  //   this.results = results
-  //   console.log(this.results)
-  // }
+  updateResults(results: MonthSearchResult[]): void {
+    // this.results = results
+    // console.log(this.results)
+  }
 }

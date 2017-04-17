@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MonthSearchResult } from '../month-results/month-results.model'
 
+
 @Component({
   selector: 'app-home-view',
   templateUrl: './home-view.component.html',
