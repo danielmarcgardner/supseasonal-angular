@@ -1,0 +1,14 @@
+.footer{
+  text-align: center;
+  background-color: orange;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  color: white;
+  padding: 10px;
+}
+
+.navBar{
+  background-color: orange !important;
+}

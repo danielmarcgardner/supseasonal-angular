@@ -1,0 +1,9 @@
+.submitButton {
+  margin-top: 10px;
+  width: 10%;
+  background-color: orange !important;
+}
+
+.searchComponent{
+  text-align: center;
+}

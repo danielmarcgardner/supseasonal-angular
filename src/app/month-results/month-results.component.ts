@@ -9,7 +9,9 @@ import { MonthSearchResult } from './month-results.model'
 export class MonthResultsComponent implements OnInit {
   @Input() result: MonthSearchResult;
 
-  constructor() {  }
+  constructor() {
+
+  }
 
   ngOnInit() {
   }

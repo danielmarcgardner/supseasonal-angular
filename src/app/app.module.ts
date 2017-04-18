@@ -12,11 +12,19 @@ import { MonthResultsComponent } from './month-results/month-results.component';
 import { supSearchInjectables } from './month-search/search-months.injectables';
 import { MonthViewComponent } from './month-view/month-view.component';
 import { RouterModule, Routes} from '@angular/router';
+import { RecipesViewComponent } from './recipes-view/recipes-view.component';
+import { supMonthSearchInjectables } from './ingredient-search/ingredient-search.injectable';
+import { IngredientViewComponent } from './ingredient-view/ingredient-view.component';
+import { IngredientTableComponent } from './ingredient-table/ingredient-table.component';
+import { RecipeDropdownComponent } from './recipe-dropdown/recipe-dropdown.component';
+import { RecipeBoxesComponent } from './recipe-boxes/recipe-boxes.component';
 
 const routes: Routes =[
 {path: '', redirectTo: 'home', pathMatch: 'full'},
 {path: 'home', component: HomeViewComponent },
-{path: 'month', component: MonthViewComponent }
+{path: 'month', component: MonthViewComponent },
+{path: 'ingredient', component: IngredientViewComponent },
+{path: 'recipe', component: RecipesViewComponent }
 ]
 
 
@@ -29,7 +37,12 @@ const routes: Routes =[
     IngredientSearchComponent,
     HomeViewComponent,
     MonthResultsComponent,
-    MonthViewComponent
+    MonthViewComponent,
+    RecipesViewComponent,
+    IngredientViewComponent,
+    IngredientTableComponent,
+    RecipeDropdownComponent,
+    RecipeBoxesComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +51,7 @@ const routes: Routes =[
     SuiModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [supSearchInjectables],
+  providers: [supSearchInjectables, supMonthSearchInjectables],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

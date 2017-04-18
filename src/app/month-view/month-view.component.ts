@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MonthSearchResult } from '../month-results/month-results.model';
+import { IngredientResult } from '../ingredient-search/ingredient-results.model';
 
 @Component({
   selector: 'app-month-view',
@@ -8,7 +8,7 @@ import { MonthSearchResult } from '../month-results/month-results.model';
 })
 
 export class MonthViewComponent implements OnInit {
-  results: MonthSearchResult[];
+  results: IngredientResult[];
   loading: boolean;
 
   constructor() {
@@ -16,6 +16,10 @@ export class MonthViewComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  updateResults(results: IngredientResult[]): void {
+    this.results = results
   }
 
 }

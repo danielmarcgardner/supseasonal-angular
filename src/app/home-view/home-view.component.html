@@ -1,14 +1,22 @@
 <h1 class="headerName"> Sup Seasonal </h1>
-<app-month-search class="monthDropdown"
-  (loading)="loading = $event"
-  (results)="updateResults($event)"
-></app-month-search>
-
-<!-- <div class="seasonalBox">
-  <h1> Seasonal Ingredients </h1>
-  <app-month-results *ngFor="let result of results"
-    [result]="result">
-  </app-month-results>
-</div> -->
-
-<app-month-view></app-month-view>
+<img class="image" src='http://www.freepptbackground.com/wp-content/uploads/2015/04/fresh-fruits-and-vegetables-ppt-background.jpg' alt="fruit"/>
+<div class="description">
+  <p>
+    Welcome to Sup Seasonal, the produce app that let's you know what is in season! To see what ingredients are
+    available in a given month click the 'Search By Month' button above. To search by an ingredient to see when it is in season
+    use the 'Search By Ingredient' button below. To search for recipes with seasonal ingredients by month use the recipe button below.
+  </p>
+</div>
+<div class="ui two column centered grid">
+  <div class="five column centered row buttonClass">
+    <div class="column">
+      <button class="ui primary button linkButton" [routerLink]="['/month']">Search By Month</button>
+    </div>
+    <div class="column">
+      <button class="ui primary button linkButton" [routerLink]="['/ingredient']">Search By Ingredient</button>
+    </div>
+    <div class="column">
+      <button class="ui primary button linkButton">Recipes</button>
+    </div>
+  </div>
+</div>

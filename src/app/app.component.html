@@ -1,9 +1,18 @@
-<div class="ui orange inverted menu">
-  <div class="header item">
+<div class="ui inverted menu navBar">
+  <a [routerLink]="['/month']"class="item">
+    Month
+  </a>
+  <a [routerLink]="['/ingredient']" class="item">
+    Ingredient
+  </a>
+  <a [routerLink]="['/recipe']" class="item">
+    Recipe
+  </a>
+  <a class="header item right" [routerLink]="['/home']">
     Sup Seasonal
-  </div>
-  <a [routerLink]="['/home']"class="item right">
-    Home
   </a>
 </div>
 <router-outlet></router-outlet>
+<footer class="footer">
+  <p>Project was built By Daniel Gardner using Angular 4 as an experiment with Angular 4</p>
+</footer>

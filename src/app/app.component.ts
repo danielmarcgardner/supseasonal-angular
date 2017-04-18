@@ -8,15 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  // results: MonthSearchResult[];
-  // loading: boolean;
 
   constructor(private router: Router){}
 
   ngOnInit(){}
 
-  updateResults(results: MonthSearchResult[]): void {
-    // this.results = results
-    // console.log(this.results)
-  }
 }

@@ -13,3 +13,24 @@
   margin-left: 10%;
   text-align: center;
 }
+
+.image {
+  width: 50%;
+  height: 40%;
+  margin-left: 25%;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.description {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.buttonClass{
+  margin-top: 20px;
+}
+
+.linkButton{
+  background-color: orange !important
+}
