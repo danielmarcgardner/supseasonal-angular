@@ -8,9 +8,8 @@
   width: 30%;
 }
 
-.seasonalBox{
-  margin-top: 50px;
-  width: 80%;
+.RecipeCards{
   margin-left: 10%;
-  text-align: center;
+  width: 80%;
+  margin-bottom: 5%;
 }

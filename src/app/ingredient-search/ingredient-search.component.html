@@ -1,3 +1,13 @@
-<p>
-  ingredient-search works!
-</p>
+<div class="searchComponent">
+  <h1> Search For Ingredients By Ingredient</h1>
+  <select class="ui selection dropdown" [(ngModel)]="selected" (change)="dropdownSelect(selected)">
+    <option *ngFor="let food of foodArr" [value]= "food.value">
+      {{food.name}}
+    </option>
+  </select>
+
+  <br>
+  <button class="ui primary button submitButton" (click)="searchFood(selected)">
+    Select a month
+  </button>
+</div>

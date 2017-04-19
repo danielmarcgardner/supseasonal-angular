@@ -4,15 +4,12 @@ import { Component,
   EventEmitter,
   ElementRef } from '@angular/core';
 import { NgModule } from '@angular/core';
-import { Months } from './months'
-import { MonthSearchResult } from '../month-results/month-results.model'
+import { Months } from './months';
+import { MonthSearchResult } from '../month-results/month-results.model';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/fromEvent';
 import 'rxjs/add/operator/map';
-// import 'rxjs/add/operator/filter';
-// import 'rxjs/add/operator/debounceTime';
-// import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/switch';
 import { SupSearchService } from './search-months.service';
 
@@ -26,7 +23,7 @@ export class MonthSearchComponent implements OnInit {
   @Output() loading: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() results: EventEmitter<MonthSearchResult[]> = new EventEmitter<MonthSearchResult[]>();
 
-  selectedMonth:string;
+  selectedMonth: string;
   monthArr = [
     new Months('jan', 'January'),
     new Months('feb', 'February'),
@@ -42,28 +39,28 @@ export class MonthSearchComponent implements OnInit {
     new Months('dec', 'December'),
   ];
 
-  dropdownSelect(value:string): void {
+  dropdownSelect(value: string): void {
     this.selectedMonth = value;
   }
 
- searchMonth(query) {
-   Observable.fromEvent(this.el.nativeElement, 'click')
-     .map((query: string) => this.supSearch.search(this.selectedMonth))
-     .switch()
-     .subscribe(
-       (results: MonthSearchResult[]) => {
-         this.loading.emit(false);
-         this.results.emit(results);
-       },
-       (err: any) => {
-         console.log(err);
-         this.loading.emit(false);
-       },
-       () => {
-         this.loading.emit(false);
-       }
-     );
-}
+  searchMonth(query: string) {
+    Observable.fromEvent(this.el.nativeElement, 'click')
+    .map((query: string) => this.supSearch.search(this.selectedMonth))
+    .switch()
+    .subscribe(
+      (results: MonthSearchResult[]) => {
+        this.loading.emit(false);
+        this.results.emit(results);
+      },
+      (err: any) => {
+        console.log(err);
+        this.loading.emit(false);
+      },
+      () => {
+        this.loading.emit(false);
+      }
+    );
+  }
   constructor(private supSearch: SupSearchService, private el: ElementRef  ) {
 
   }

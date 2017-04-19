@@ -1,5 +1,5 @@
 <div class="searchComponent">
-  <h1> Search For Ingredients By Month</h1>
+  <h1> Search For Recipes By Month</h1>
   <select class="ui selection dropdown" [(ngModel)]="selected" (change)="dropdownSelect(selected)">
     <option *ngFor="let month of monthArr" [value]= "month.value">
       {{month.name}}
@@ -7,7 +7,7 @@
   </select>
 
   <br>
-  <button class="ui primary button submitButton" (click)="searchMonth(selected)">
+  <button class="ui primary button submitButton" (click)="searchRecipe(selected)">
     Select a month
   </button>
 </div>

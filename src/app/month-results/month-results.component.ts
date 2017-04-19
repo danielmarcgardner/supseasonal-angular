@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MonthSearchResult } from './month-results.model'
+import { MonthSearchResult } from './month-results.model';
 
 @Component({
   selector: 'app-month-results',
@@ -9,7 +9,9 @@ import { MonthSearchResult } from './month-results.model'
 export class MonthResultsComponent implements OnInit {
   @Input() result: MonthSearchResult;
 
-  constructor() {  }
+  constructor() {
+
+  }
 
   ngOnInit() {
   }

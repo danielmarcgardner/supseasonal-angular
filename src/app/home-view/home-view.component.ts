@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MonthSearchResult } from '../month-results/month-results.model'
+import { MonthSearchResult } from '../month-results/month-results.model';
 
 
 @Component({
@@ -17,7 +17,7 @@ export class HomeViewComponent implements OnInit {
   }
 
   updateResults(results: MonthSearchResult[]): void {
-    this.results = results
+    this.results = results;
   }
 
 }
