@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { RecipeResult } from '../recipe-dropdown/recipe.model'
+import { RecipeResult } from '../recipe-dropdown/recipe.model';
 
 @Component({
   selector: 'app-recipe-cards',

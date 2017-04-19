@@ -23,22 +23,22 @@ export class IngredientSearchComponent implements OnInit {
   @Output() loadingFood: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() resultsFood: EventEmitter<IngredientResult[]> = new EventEmitter<IngredientResult[]>();
 
-  foodArr=[];
-  selectedIngredient:number;
+  foodArr = [];
+  selectedIngredient: number;
 
-  constructor(private http:Http, private supFood:SupSearchFoods, private el: ElementRef) { }
+  constructor(private http: Http, private supFood: SupSearchFoods, private el: ElementRef) { }
 
   ngOnInit() {
     this.http.request('http://supseasonal.herokuapp.com/api/foods')
-      .subscribe((res: Response)=> {
+      .subscribe((res: Response) => {
         return(<any> res.json().map((item) => {
-          return this.foodArr.push(new Food(item.id, item.food_name))
-        }))
+          return this.foodArr.push(new Food(item.id, item.food_name));
+        }));
       }
     );
   }
 
-  dropdownSelect(value:number): void {
+  dropdownSelect(value: number): void {
     this.selectedIngredient = value;
   }
 

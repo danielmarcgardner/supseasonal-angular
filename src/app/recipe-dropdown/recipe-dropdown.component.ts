@@ -4,8 +4,8 @@ import { Component,
   EventEmitter,
   ElementRef } from '@angular/core';
 import { NgModule } from '@angular/core';
-import { Months } from '../month-search/months'
-import { RecipeResult } from './recipe.model'
+import { Months } from '../month-search/months';
+import { RecipeResult } from './recipe.model';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/fromEvent';
@@ -22,7 +22,7 @@ export class RecipeDropdownComponent implements OnInit {
   @Output() loadingRecipe: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Output() resultsRecipe: EventEmitter<RecipeResult[]> = new EventEmitter<RecipeResult[]>();
 
-  selectedMonth:string;
+  selectedMonth: string;
   monthArr = [
     new Months('jan', 'January'),
     new Months('feb', 'February'),
@@ -38,17 +38,16 @@ export class RecipeDropdownComponent implements OnInit {
     new Months('dec', 'December'),
   ];
 
-  dropdownSelect(value:string): void {
+  dropdownSelect(value: string): void {
     this.selectedMonth = value;
   }
 
-  searchRecipe(query:string) {
+  searchRecipe(query: string) {
     Observable.fromEvent(this.el.nativeElement, 'click')
      .map((query: string) => this.supSearch.searchRecipe(this.selectedMonth))
      .switch()
      .subscribe(
        (results: RecipeResult[]) => {
-         console.log(results)
          this.loadingRecipe.emit(false);
          this.resultsRecipe.emit(results);
        },
@@ -60,7 +59,7 @@ export class RecipeDropdownComponent implements OnInit {
          this.loadingRecipe.emit(false);
        }
      );
-   }
+  }
 
   constructor(private supSearch: SupRecipeService, private el: ElementRef) {
 

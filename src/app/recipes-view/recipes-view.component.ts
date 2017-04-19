@@ -16,7 +16,7 @@ export class RecipesViewComponent implements OnInit {
   }
 
   updateResults(results: RecipeResult[]): void {
-    this.resultsRecipe = results
+    this.resultsRecipe = results;
   }
 
 }

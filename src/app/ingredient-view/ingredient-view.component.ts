@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IngredientResult } from '../ingredient-search/ingredient-results.model'
+import { IngredientResult } from '../ingredient-search/ingredient-results.model';
 
 @Component({
   selector: 'app-ingredient-view',
@@ -16,7 +16,6 @@ export class IngredientViewComponent implements OnInit {
   }
 
   updateResults(results: IngredientResult[]): void {
-    this.resultsFood = results
-    console.log('resultsfood', this.resultsFood)
+    this.resultsFood = results;
   }
 }

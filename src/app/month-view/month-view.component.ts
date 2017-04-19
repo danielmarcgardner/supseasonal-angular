@@ -19,7 +19,7 @@ export class MonthViewComponent implements OnInit {
   }
 
   updateResults(results: IngredientResult[]): void {
-    this.results = results
+    this.results = results;
   }
 
 }

@@ -1,10 +1,6 @@
-<app-ingredient-search class="ingredientDropdown"
-  (loadingFood)="loading = $event"
-  (resultsFood)="updateResults($event)"
-></app-ingredient-search>
+<app-ingredient-search class="ingredientDropdown" (loadingFood)="loading = $event" (resultsFood)="updateResults($event)"></app-ingredient-search>
 
 <div class="ingTable" *ngIf="resultsFood">
-  <app-ingredient-table *ngFor="let resultFood of resultsFood"
-    [resultFood]="resultFood" >
+  <app-ingredient-table *ngFor="let resultFood of resultsFood" [resultFood]="resultFood">
   </app-ingredient-table>
 </div>

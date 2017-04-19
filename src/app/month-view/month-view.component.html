@@ -1,11 +1,8 @@
-<app-month-search class="monthDropdown"
-  (loading)="loading = $event"
-  (results)="updateResults($event)">
+<app-month-search class="monthDropdown" (loading)="loading = $event" (results)="updateResults($event)">
 </app-month-search>
 
 <div class="seasonalBox">
   <h1 *ngIf="results"> Seasonal Ingredients </h1>
-  <app-month-results *ngFor="let result of results"
-    [result]="result">
+  <app-month-results *ngFor="let result of results" [result]="result">
   </app-month-results>
 </div>
