@@ -5,14 +5,14 @@ import { Component,
   ElementRef  } from '@angular/core';
 // import { SupSearchDropdown } from './ingredient-search.service';
 import { NgModule } from '@angular/core';
-import { Food } from './food'
+import { Food } from './food';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/fromEvent';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switch';
 import { SupSearchFoods } from './ingredient-search.service';
-import { IngredientResult } from './ingredient-results.model'
+import { IngredientResult } from './ingredient-results.model';
 
 @Component({
   selector: 'app-ingredient-search',
@@ -33,9 +33,10 @@ export class IngredientSearchComponent implements OnInit {
       .subscribe((res: Response)=> {
         return(<any> res.json().map((item) => {
           return this.foodArr.push(new Food(item.id, item.food_name))
-        })
-      )}
-  )}
+        }))
+      }
+    );
+  }
 
   dropdownSelect(value:number): void {
     this.selectedIngredient = value;
@@ -58,5 +59,5 @@ export class IngredientSearchComponent implements OnInit {
           this.loadingFood.emit(false);
         }
       );
- }
+  }
 }

@@ -1,3 +1,18 @@
-<p>
-  recipes-view works!
-</p>
+<app-recipe-dropdown class="monthDropdown"
+  (loadingRecipe)="loading = $event"
+  (resultsRecipe)="updateResults($event)">
+</app-recipe-dropdown>
+
+<div class="RecipeCards">
+  <div class="ui grid">
+    <div class="row">
+      <div class="column">
+        <app-recipe-cards
+        *ngFor="let resultRecipe of resultsRecipe"
+        [resultRecipe]="resultRecipe"
+        >
+      </app-recipe-cards>
+      </div>
+    </div>
+  </div>
+</div>

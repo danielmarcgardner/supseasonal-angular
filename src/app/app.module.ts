@@ -18,6 +18,8 @@ import { IngredientViewComponent } from './ingredient-view/ingredient-view.compo
 import { IngredientTableComponent } from './ingredient-table/ingredient-table.component';
 import { RecipeDropdownComponent } from './recipe-dropdown/recipe-dropdown.component';
 import { RecipeBoxesComponent } from './recipe-boxes/recipe-boxes.component';
+import { supRecipeInjectables } from './recipe-dropdown/recipe.injectables';
+import { RecipeCardsComponent } from './recipe-cards/recipe-cards.component';
 
 const routes: Routes =[
 {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -42,7 +44,8 @@ const routes: Routes =[
     IngredientViewComponent,
     IngredientTableComponent,
     RecipeDropdownComponent,
-    RecipeBoxesComponent
+    RecipeBoxesComponent,
+    RecipeCardsComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,7 @@ const routes: Routes =[
     SuiModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [supSearchInjectables, supMonthSearchInjectables],
+  providers: [supSearchInjectables, supMonthSearchInjectables, supRecipeInjectables],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

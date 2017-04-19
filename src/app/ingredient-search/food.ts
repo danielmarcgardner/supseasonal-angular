@@ -1,5 +1,5 @@
-export class Food{
-  constructor(public value: string, public name: string){
-    
+export class Food {
+  constructor(public value: string, public name: string) {
+
   }
 }

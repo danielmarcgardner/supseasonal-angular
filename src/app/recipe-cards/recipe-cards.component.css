@@ -1,0 +1,7 @@
+.recipeCard{
+  display: inline-block;
+  height: 50%;
+  width: 20%;
+  margin-left: 10px;
+  overflow: scroll;
+}

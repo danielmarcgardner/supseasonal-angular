@@ -1,0 +1,19 @@
+<div class="ui card recipeCard">
+  <div class="image">
+    <img class="image" src={{resultRecipe.image}} alt="Food Image">
+  </div>
+  <div class="content">
+    <h3 class="header">{{resultRecipe.title}}</h3>
+    <div class="meta">
+      <span class="date">{{'Ready In: ' + resultRecipe.readyInMinutes}}</span>
+    </div>
+    <div class="description" *ngFor="let recipe of resultRecipe.extendedIngredients">
+      {{recipe.originalString}}
+    </div>
+  </div>
+  <div class="extra content">
+    <p>
+      {{resultRecipe.instructions}}
+    </p>
+  </div>
+</div>

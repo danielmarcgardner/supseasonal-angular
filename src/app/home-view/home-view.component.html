@@ -7,16 +7,8 @@
     use the 'Search By Ingredient' button below. To search for recipes with seasonal ingredients by month use the recipe button below.
   </p>
 </div>
-<div class="ui two column centered grid">
-  <div class="five column centered row buttonClass">
-    <div class="column">
-      <button class="ui primary button linkButton" [routerLink]="['/month']">Search By Month</button>
-    </div>
-    <div class="column">
-      <button class="ui primary button linkButton" [routerLink]="['/ingredient']">Search By Ingredient</button>
-    </div>
-    <div class="column">
-      <button class="ui primary button linkButton">Recipes</button>
-    </div>
-  </div>
+<div class="buttonDiv">
+  <button class="ui primary button linkButton" [routerLink]="['/month']">Search By Month</button>
+  <button class="ui primary button linkButton" [routerLink]="['/ingredient']">Search By Ingredient</button>
+  <button class="ui primary button linkButton">Recipes</button>
 </div>
