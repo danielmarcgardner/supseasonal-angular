@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { MonthSearchComponent } from './month-search/month-search.component';
 import { IngredientSearchComponent } from './ingredient-search/ingredient-search.component';
 import { HomeViewComponent } from './home-view/home-view.component';
-import {SuiModule} from 'ng2-semantic-ui';
 import { MonthResultsComponent } from './month-results/month-results.component';
 import { supSearchInjectables } from './month-search/search-months.injectables';
 import { MonthViewComponent } from './month-view/month-view.component';
@@ -47,7 +46,6 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    SuiModule,
     RouterModule.forRoot(routes)
   ],
   providers: [supSearchInjectables, supMonthSearchInjectables, supRecipeInjectables],
